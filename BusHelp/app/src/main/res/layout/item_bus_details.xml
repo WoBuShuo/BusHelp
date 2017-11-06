@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_marginRight="13dp"
+              android:layout_marginLeft="13dp"
+              android:layout_height="55dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="26dp"
+        android:layout_height="match_parent">
+        <View
+            android:layout_weight="1"
+            android:id="@+id/item_bus_details_up"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="3dp"
+            android:background="@color/ring_color"
+            android:layout_height="0dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="1"
+            android:id="@+id/item_bus_details_position"
+            android:gravity="center"
+            android:background="@drawable/item_bus_details_num"
+            android:layout_height="26dp"
+            />
+        <View
+            android:layout_weight="1"
+            android:layout_width="3dp"
+            android:id="@+id/item_bus_details_down"
+            android:background="@color/ring_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_bus_details_name"
+        android:layout_marginLeft="11dp"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

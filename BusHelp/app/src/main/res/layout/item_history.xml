@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/transist_list_search_history_item"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_history_start"
+        android:layout_gravity="center_vertical"
+        android:text="雪厂街"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+
+        android:src="@mipmap/transit_history_to"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/item_history_end"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:text="雪厂街"/>
+</LinearLayout>

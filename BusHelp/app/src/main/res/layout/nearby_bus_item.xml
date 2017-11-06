@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/nearby_bus_image"
+        android:layout_width="33dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/bus_station"
+        android:layout_height="33dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="文心5路北"
+            android:layout_width="wrap_content"
+            android:id="@+id/nearby_bus_name"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/nearby_bus_bus"
+            android:text="M209路，229路"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="200m"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/nearby_bus_distance"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

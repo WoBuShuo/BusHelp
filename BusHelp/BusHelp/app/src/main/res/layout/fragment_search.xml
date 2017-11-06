@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/search_linear_layout">
+
+        <EditText
+            android:id="@+id/search_fragment_edit"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:hint="搜索路線"
+            android:textColorHint="#bcbcc2"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/search_fragment_search_btn"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:background="@color/ring_color"
+            android:src="@mipmap/abc_ic_search_api_mtrl_alpha"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:text="熱門路線"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_fragment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:orientation="horizontal"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/item_search_address_image"
+        android:background="@mipmap/transist_list_search_item"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/item_search_address_name"
+        android:layout_width="wrap_content"
+        android:text="大宝阁"
+        app:layout_constraintLeft_toRightOf="@+id/item_search_address_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/item_search_address_english_name"
+        android:layout_width="wrap_content"
+        android:text="dabaoge"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/item_search_address_image"
+        app:layout_constraintTop_toBottomOf="@+id/item_search_address_name"
+        android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

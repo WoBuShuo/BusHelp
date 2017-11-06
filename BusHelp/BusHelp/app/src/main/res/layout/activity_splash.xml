@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/welcome"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Button
+        android:id="@+id/splash_return"
+        android:layout_width="52dp"
+        android:layout_height="34dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/splash_btn_bg"
+        android:text="跳过"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/splash_image"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <Button
+        android:id="@+id/splash_ad"
+        android:background="#a0a6a5a0"
+        android:text="广告"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_width="31dp"
+        android:layout_height="22dp"/>
+</android.support.constraint.ConstraintLayout>

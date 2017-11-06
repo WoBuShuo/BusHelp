@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/plan_toolbar"
+            android:background="@color/tabColor"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"/>
+        <!--起点-->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:id="@+id/item_plan_details_head_start_image"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/travel_list_start_ic"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_plan_details_head_start_image"/>
+
+            <TextView
+                android:id="@+id/plan_start_address"
+                style="@style/plan_details_station_text"
+                android:text="我的位置"
+                app:layout_constraintBottom_toBottomOf="@id/item_plan_details_head_start_image"
+                app:layout_constraintLeft_toRightOf="@id/item_plan_details_head_start_image"
+                app:layout_constraintTop_toTopOf="@id/item_plan_details_head_start_image"/>
+
+
+            <TextView
+                android:id="@+id/plan_start_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="14dp"
+                android:text="步行858m"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/view2"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <!--第一次乘车-->
+        <LinearLayout
+            android:id="@+id/plan_bus1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/travel_busblue_ic"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@mipmap/travel_list_start_ic"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plan_bus_direction1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/home_down_ic"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/plan_station_name_recycler1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <!--第一次步行-->
+        <LinearLayout
+            android:id="@+id/plan_walk1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_walk3"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/plan_walk1"
+                android:layout_marginLeft="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <!--第二次乘车-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/plan_bus2_layout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/travel_busblue_ic"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@mipmap/travel_list_start_ic"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plan_bus_direction2"
+                    android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/home_down_ic"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/plan_station_name_recycler2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <!--第二次步行-->
+        <LinearLayout
+            android:id="@+id/plan_walk2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_walk3"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/plan_walk2"
+                android:layout_marginLeft="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!--第三次乘车-->
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/plan_bus3_layout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/travel_busblue_ic"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@mipmap/travel_list_start_ic"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/green"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plan_bus_direction3"
+                    android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/home_down_ic"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/plan_station_name_recycler3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <!--终点位置-->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/plan_end_view"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="42dp"
+                android:background="#44CBA9"
+                app:layout_constraintBottom_toBottomOf="@+id/item_plan_details_head_end_image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/item_plan_details_head_end_image"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="38dp"
+                android:background="@mipmap/travel_list_end_ic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/plan_end_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="nihao"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_end_address"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/plan_end_address"
+                style="@style/plan_details_station_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="14dp"
+                android:text="步行858m"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/plan_end_view"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
+
